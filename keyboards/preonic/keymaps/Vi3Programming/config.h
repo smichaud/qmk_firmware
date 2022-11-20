@@ -16,6 +16,10 @@
 
 #pragma once
 
+
+#define MOUSEKEY_TIME_TO_MAX 40 
+#define MK_KINETIC_SPEED 1 
+
 // Check this for removed sounds: https://github.com/qmk/qmk_firmware/pull/5905/files
 
 #define SOUND_ZELDA_TREASURE \
