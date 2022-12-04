@@ -31,6 +31,10 @@ enum custom_keycodes {
   E_ACU_U,
   E_UML_L,
   E_UML_U,
+  I_HAT_L,
+  I_HAT_U,
+  I_UML_L,
+  I_UML_U,
   O_HAT_L,
   O_HAT_U,
   U_HAT_L,
@@ -92,8 +96,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_ACCENTS] = LAYOUT_preonic_grid(
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-  _______, A_GRV_U, E_GRV_U, E_HAT_U, E_ACU_U, E_UML_U, U_GRV_U, U_GRV_L, _______, O_HAT_L, O_HAT_U, _______,
-  _______, A_GRV_L, E_GRV_L, E_HAT_L, E_ACU_L, E_UML_L, U_HAT_U, U_HAT_L, _______, _______, _______, _______,
+  _______, A_GRV_U, E_GRV_U, E_HAT_U, E_ACU_U, E_UML_U, U_GRV_U, U_GRV_L, I_HAT_L, I_HAT_U, O_HAT_L, O_HAT_U,
+  _______, A_GRV_L, E_GRV_L, E_HAT_L, E_ACU_L, E_UML_L, U_HAT_U, U_HAT_L, I_UML_L, I_UML_U, _______, _______,
   _______, A_HAT_L, A_HAT_U, C_CED_L, C_CED_U, _______, _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
@@ -229,6 +233,30 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case E_UML_U:
           if (record->event.pressed) {
             SEND_STRING(SS_LCTL(SS_LSFT("u")) SS_DELAY(MACRO_DELAY) "00cb\n");
+          }
+          return false;
+          break;
+        case I_HAT_L:
+          if (record->event.pressed) {
+            SEND_STRING(SS_LCTL(SS_LSFT("u")) SS_DELAY(MACRO_DELAY) "00ee\n");
+          }
+          return false;
+          break;
+        case I_HAT_U:
+          if (record->event.pressed) {
+            SEND_STRING(SS_LCTL(SS_LSFT("u")) SS_DELAY(MACRO_DELAY) "00ce\n");
+          }
+          return false;
+          break;
+        case I_UML_L:
+          if (record->event.pressed) {
+            SEND_STRING(SS_LCTL(SS_LSFT("u")) SS_DELAY(MACRO_DELAY) "00ef\n");
+          }
+          return false;
+          break;
+        case I_UML_U:
+          if (record->event.pressed) {
+            SEND_STRING(SS_LCTL(SS_LSFT("u")) SS_DELAY(MACRO_DELAY) "00cf\n");
           }
           return false;
           break;
