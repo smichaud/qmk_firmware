@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-#define MACRO_DELAY 35
+#define MACRO_DELAY 45
 float linux_sound[][2] = SONG(SOUND_MARIO_MUSHROOM);
 float windows_sound[][2] = SONG(SOUND_MARIO_GAMEOVER);
 
